@@ -16,11 +16,15 @@ Oculus Quest recommended (required 6DOF headset/controllers).<br>
 
 Oculus Browser (Oculus Quest Firmware update 12.0 or later).
 
+# Threejs-VR-Hipparcos Pages
+
+[https://physicslibrary.github.io/Threejs-VR-Hipparcos/](https://physicslibrary.github.io/Threejs-VR-Hipparcos/)
+
 # Installation
 
 No installation. In Oculus Quest, open Oculus Browser and go to link:
 
-
+[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html)
 
 Solar system is located at the yellow sphere.
 
