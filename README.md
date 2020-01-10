@@ -16,7 +16,7 @@ No installation. In Oculus Quest, open Oculus Browser and go to link:
 
 
 
-Our Solar System is the green box. See ~8000 stars within 50.0 parsec (to solve plotting 119,617 stars on a mobile VR device).
+Our Solar System is the green box. See a subset ~8000 stars within 50.0 parsec (solve how to plot 119,617 stars on a mobile VR device).
 
 Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, no common star names, solve how to move around stars on a mobile VR device).
 
@@ -25,29 +25,27 @@ Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple,
 [https://threejs.org/](https://threejs.org/)
 
 hygxyz.csv (file is an old version, stars moving since 1989):<br>
-https://github.com/astronexus/HYG-Database
+[https://github.com/astronexus/HYG-Database](https://github.com/astronexus/HYG-Database)
 
 # References
 
-https://www.cosmos.esa.int/web/hipparcos/home
+[https://www.cosmos.esa.int/web/hipparcos/home](https://www.cosmos.esa.int/web/hipparcos/home)
 
-https://www.cosmos.esa.int/web/hipparcos/common-star-names
+[https://www.cosmos.esa.int/web/hipparcos/common-star-names](https://www.cosmos.esa.int/web/hipparcos/common-star-names)
 
-http://sci.esa.int/star_mapper/
+[http://sci.esa.int/star_mapper/](http://sci.esa.int/star_mapper/)
 
-http://sci.esa.int/hipparcos/58154-star-mapper/
+[https://en.wikipedia.org/wiki/Hipparcos](https://en.wikipedia.org/wiki/Hipparcos)
 
-https://en.wikipedia.org/wiki/Hipparcos
-
-https://en.wikipedia.org/wiki/Parsec
+[https://en.wikipedia.org/wiki/Parsec](https://en.wikipedia.org/wiki/Parsec)
 
 This project is a port of [https://github.com/Physicslibrary/ARKit-Stereoscope-Hipparcos](https://github.com/Physicslibrary/ARKit-Stereoscope-Hipparcos) which is started with a book "3D Scientific Visualization with Blender". In the book, there is a tutorial on how to plot a stellar catalog.
 
 Brian R. Kent, 3D Scientific Visualization with Blender, Morgan & Claypool Publishers (2015).
 
-https://www.cv.nrao.edu/~bkent/blender/thebook.html
+[https://www.cv.nrao.edu/~bkent/blender/thebook.html](https://www.cv.nrao.edu/~bkent/blender/thebook.html)
 
-https://www.cv.nrao.edu/~bkent/blender/tutorials.html
+[https://www.cv.nrao.edu/~bkent/blender/tutorials.html](https://www.cv.nrao.edu/~bkent/blender/tutorials.html)
 
 Three.js on how to convert WebGL examples to WebVR:
 
@@ -61,9 +59,11 @@ Three.js examples is the best place to learn and experiment:
 
 [https://github.com/mrdoob/three.js/tree/dev/examples](https://github.com/mrdoob/three.js/tree/dev/examples)
 
-https://stars.chromeexperiments.com/
+[https://github.com/Physicslibrary/Threejs-WebXR-67P](https://github.com/Physicslibrary/Threejs-WebXR-67P)
 
-https://www.html5rocks.com/en/tutorials/casestudies/100000stars/
+[https://stars.chromeexperiments.com/](https://stars.chromeexperiments.com/)
+
+[https://www.html5rocks.com/en/tutorials/casestudies/100000stars/](https://www.html5rocks.com/en/tutorials/casestudies/100000stars/)
 
 # Making Threejs-VR-Hipparcos
 
