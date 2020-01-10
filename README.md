@@ -2,6 +2,12 @@
 
 Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.
 
+<img src="images/com.oculus.vrshell-20200110-171622.jpg" width="640">
+
+<img src="images/IMG_5061.jpg" width="640">
+
+Stereoscopic view.
+
 # Hardware
 
 Oculus Quest recommended (required 6DOF headset/controllers).<br>
@@ -16,7 +22,7 @@ No installation. In Oculus Quest, open Oculus Browser and go to link:
 
 
 
-Our solar system is located at the yellow sphere.
+Solar system is located at the yellow sphere.
 
 Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, no common star names yet, no warp drive yet).
 
@@ -54,6 +60,7 @@ Three.js on how to load a file (eg. read hygxyz.csv):
 [https://threejs.org/docs/index.html#api/en/loaders/FileLoader](https://threejs.org/docs/index.html#api/en/loaders/FileLoader)
 
 Three.js on how to draw a star field:
+
 [https://threejs.org/docs/#api/en/materials/PointsMaterial](https://threejs.org/docs/#api/en/materials/PointsMaterial)
 
 Three.js examples is the best place to learn and experiment:
