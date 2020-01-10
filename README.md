@@ -75,4 +75,4 @@ Three.js examples is the best place to learn and experiment:
 
 # Making Threejs-VR-Hipparcos
 
-<br><br>Copyright (c) 2019 Hartwell Fong
+<br><br>Copyright (c) 2020 Hartwell Fong
