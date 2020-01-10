@@ -16,9 +16,9 @@ No installation. In Oculus Quest, open Oculus Browser and go to link:
 
 
 
-Our Solar System is the green box. See a subset ~8000 stars within 50.0 parsec (solve how to plot 119,617 stars on a mobile VR device).
+Our solar system is located at the yellow sphere.
 
-Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, no common star names, solve how to move around stars on a mobile VR device).
+Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, no common star names yet, no warp drive yet).
 
 # Credits
 
@@ -37,9 +37,7 @@ hygxyz.csv (file is an old version, stars moving since 1989):<br>
 
 [https://en.wikipedia.org/wiki/Hipparcos](https://en.wikipedia.org/wiki/Hipparcos)
 
-[https://en.wikipedia.org/wiki/Parsec](https://en.wikipedia.org/wiki/Parsec)
-
-This project is a port of [https://github.com/Physicslibrary/ARKit-Stereoscope-Hipparcos](https://github.com/Physicslibrary/ARKit-Stereoscope-Hipparcos) which is started with a book "3D Scientific Visualization with Blender". In the book, there is a tutorial on how to plot a stellar catalog.
+This project is a port of [https://github.com/Physicslibrary/ARKit-Stereoscope-Hipparcos](https://github.com/Physicslibrary/ARKit-Stereoscope-Hipparcos) which started with a book "3D Scientific Visualization with Blender". In the book, there is a tutorial on how to plot a stellar catalog.
 
 Brian R. Kent, 3D Scientific Visualization with Blender, Morgan & Claypool Publishers (2015).
 
@@ -54,6 +52,9 @@ Three.js on how to convert WebGL examples to WebVR:
 Three.js on how to load a file (eg. read hygxyz.csv):
 
 [https://threejs.org/docs/index.html#api/en/loaders/FileLoader](https://threejs.org/docs/index.html#api/en/loaders/FileLoader)
+
+Three.js on how to draw a star field:
+[https://threejs.org/docs/#api/en/materials/PointsMaterial](https://threejs.org/docs/#api/en/materials/PointsMaterial)
 
 Three.js examples is the best place to learn and experiment:
 
