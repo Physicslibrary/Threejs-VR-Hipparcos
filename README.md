@@ -16,9 +16,9 @@ No installation. In Oculus Quest, open Oculus Browser and go to link:
 
 
 
-Our Solar System is the green box. See ~8000 stars within 50.0 parsec (how to plot 119,617 stars on a mobile VR device).
+Our Solar System is the green box. See ~8000 stars within 50.0 parsec (to solve plotting 119,617 stars on a mobile VR device).
 
-Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, solve how to move around stars on a mobile VR device).
+Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, no common star names, solve how to move around stars on a mobile VR device).
 
 # Credits
 
@@ -30,6 +30,8 @@ https://github.com/astronexus/HYG-Database
 # References
 
 https://www.cosmos.esa.int/web/hipparcos/home
+
+https://www.cosmos.esa.int/web/hipparcos/common-star-names
 
 http://sci.esa.int/star_mapper/
 
