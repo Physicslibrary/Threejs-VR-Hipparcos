@@ -26,7 +26,7 @@ No installation. In Oculus Quest, open Oculus Browser and go to link:
 
 [https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html)
 
-Solar system is located at the yellow sphere.
+Solar system is the yellow sphere.
 
 Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, no common star names yet, no warp drive yet).
 
