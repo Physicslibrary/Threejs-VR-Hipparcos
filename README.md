@@ -18,7 +18,7 @@ No installation. In Oculus Quest, open Oculus Browser and go to link:
 
 Our Solar System is the green box. See ~8000 stars within 50.0 parsec (later figure how to plot 119,617 stars).
 
-Oculus Quest's headset 6DOF tracking is working but controllers are removed (keep code simple, later figure how to move around ~8000 stars on a mobile device).
+Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, later figure how to move around ~8000 stars on a mobile device).
 
 # Credits
 
