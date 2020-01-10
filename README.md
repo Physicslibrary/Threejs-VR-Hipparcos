@@ -16,23 +16,16 @@ No installation. In Oculus Quest, open Oculus Browser and go to link:
 
 
 
-Our Solar System is the green box. See ~8000 stars within 50.0 parsec (later figure how to plot 119,617 stars).
+Our Solar System is the green box. See ~8000 stars within 50.0 parsec (how to plot 119,617 stars on a mobile VR device).
 
-Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, later figure how to move around ~8000 stars on a mobile device).
+Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, solve how to move around stars on a mobile VR device).
 
 # Credits
 
 [https://threejs.org/](https://threejs.org/)
 
-[https://github.com/mrdoob/three.js/](https://github.com/mrdoob/three.js/)
-
-Three.js examples is the best place to learn and experiment:
-
-[https://github.com/mrdoob/three.js/tree/dev/examples](https://github.com/mrdoob/three.js/tree/dev/examples)
-
-Three.js' excellent documentation on how to convert WebGL examples to WebVR:
-
-[https://threejs.org/docs/index.html#manual/en/introduction/How-to-create-VR-content](https://threejs.org/docs/index.html#manual/en/introduction/How-to-create-VR-content)
+hygxyz.csv (file is an old version, stars moving since 1989):<br>
+https://github.com/astronexus/HYG-Database
 
 # References
 
@@ -46,17 +39,29 @@ https://en.wikipedia.org/wiki/Hipparcos
 
 https://en.wikipedia.org/wiki/Parsec
 
+This project is a port of [https://github.com/Physicslibrary/ARKit-Stereoscope-Hipparcos](https://github.com/Physicslibrary/ARKit-Stereoscope-Hipparcos) which is started with a book "3D Scientific Visualization with Blender". In the book, there is a tutorial on how to plot a stellar catalog.
+
 Brian R. Kent, 3D Scientific Visualization with Blender, Morgan & Claypool Publishers (2015).
 
 https://www.cv.nrao.edu/~bkent/blender/thebook.html
 
 https://www.cv.nrao.edu/~bkent/blender/tutorials.html
 
+Three.js on how to convert WebGL examples to WebVR:
+
+[https://threejs.org/docs/index.html#manual/en/introduction/How-to-create-VR-content](https://threejs.org/docs/index.html#manual/en/introduction/How-to-create-VR-content)
+
+Three.js on how to load a file (eg. read hygxyz.csv):
+
+[https://threejs.org/docs/index.html#api/en/loaders/FileLoader](https://threejs.org/docs/index.html#api/en/loaders/FileLoader)
+
+Three.js examples is the best place to learn and experiment:
+
+[https://github.com/mrdoob/three.js/tree/dev/examples](https://github.com/mrdoob/three.js/tree/dev/examples)
+
 https://stars.chromeexperiments.com/
 
 https://www.html5rocks.com/en/tutorials/casestudies/100000stars/
-
-https://github.com/astronexus/HYG-Database
 
 # Making Threejs-VR-Hipparcos
 
