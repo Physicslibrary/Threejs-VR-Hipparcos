@@ -77,6 +77,8 @@ Three.js examples is the best place to learn and experiment:
 
 [https://www.html5rocks.com/en/tutorials/casestudies/100000stars/](https://www.html5rocks.com/en/tutorials/casestudies/100000stars/)
 
+http://exploratoria.github.io/exhibits/astronomy/star-spotter/index.html
+
 # Making Threejs-VR-Hipparcos (under construction)
 
 Camera frustum far plane default is 2000. Check how many stars are within this boundary. 
