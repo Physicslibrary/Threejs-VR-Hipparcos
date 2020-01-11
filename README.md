@@ -1,4 +1,4 @@
-# Threejs-VR-Hipparcos (under construction)
+# Threejs-VR-Hipparcos
 
 Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.
 
@@ -77,6 +77,10 @@ Three.js examples is the best place to learn and experiment:
 
 [https://www.html5rocks.com/en/tutorials/casestudies/100000stars/](https://www.html5rocks.com/en/tutorials/casestudies/100000stars/)
 
-# Making Threejs-VR-Hipparcos
+# Making Threejs-VR-Hipparcos (under construction)
+
+Camera frustum far plane default is 2000. Check how many stars are within this boundary. 
+
+[https://threejs.org/docs/#api/en/cameras/PerspectiveCamera](https://threejs.org/docs/#api/en/cameras/PerspectiveCamera)
 
 <br><br>Copyright (c) 2020 Hartwell Fong
