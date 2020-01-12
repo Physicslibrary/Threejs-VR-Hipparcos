@@ -1,0 +1,158 @@
+<!--
+
+webxr_vr_hipparcos2.html
+
+https://github.com/Physicslibrary/Threejs-VR-Hipparcos
+
+MIT License
+
+Copyright (c) 2020 Hartwell Fong
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+January 2020.
+
+Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.
+
+Hardware
+Oculus Quest recommended (required 6DOF headset/controllers).
+
+Software
+Oculus Browser (Oculus Quest Firmware update 12.0 or later).
+
+Credits
+https://threejs.org/
+hygxyz.csv (file is an old version, stars moving since 1989):
+https://github.com/astronexus/HYG-Database
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Hipparcos Catalog</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>		
+	</head>
+	<body>
+
+<script type="module">
+
+import * as THREE from '../build/three.module.js';
+import { VRButton } from './jsm/webxr/VRButton.js';
+	
+var camera, scene, renderer, container;
+var array = [];
+
+// read hygxyz.csv
+
+var loader = new THREE.FileLoader();
+
+loader.load('hygxyz.csv',
+
+	// onLoad callback
+	function ( data ) {
+		
+		array = data.split('\n');
+
+		//console.log(array.length);
+		//console.log(array[0]);
+		//console.log(array[1]);
+
+		init();
+		animate();
+
+	},
+
+	// onProgress callback
+	function ( xhr ) {
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+	},
+
+	// onError callback
+	function ( err ) {
+		console.error( 'An error happened' );
+	}
+
+);
+
+function init() {
+
+	container = document.createElement('div');
+	document.body.appendChild(container);
+	camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 2000);
+
+	scene = new THREE.Scene();
+	scene.background = new THREE.Color(0x000000);
+
+	var starsGeometry = new THREE.Geometry();
+  
+  var yoffset = 1.0; // move stars 1m above floor
+  var zoffset = -0.5; // move stars 0.5m in front
+  var scale = 180; // scale down the stars' positions
+  
+	for(var k=2; k<array.length; k++) {
+
+		var stars = new THREE.Vector3();
+
+		stars.x = parseFloat(array[k].split(',')[17])/scale;
+		stars.y = parseFloat(array[k].split(',')[18])/scale+yoffset;
+		stars.z = parseFloat(array[k].split(',')[19])/scale+zoffset;
+	
+  if(stars.y > yoffset && stars.y < yoffset+0.4){
+		starsGeometry.vertices.push(stars);
+  }
+
+	}
+
+	var starsMaterial = new THREE.PointsMaterial({color: 0x888888, size: 0.05});
+	var starsHipparcos = new THREE.Points(starsGeometry, starsMaterial);
+	scene.add(starsHipparcos);
+
+	// our solar system a yellow round sphere
+	var sunGeometry = new THREE.SphereGeometry( 0.02, 32, 32 );
+	var sunMaterial = new THREE.MeshBasicMaterial( {color: 0xe7c100} );
+	var sun = new THREE.Mesh( sunGeometry,sunMaterial );
+	sun.position.set(0,1.0,0); // 1.0m above the floor
+	scene.add(sun);
+
+	renderer = new THREE.WebGLRenderer({antialias: false});
+	renderer.setPixelRatio(window.devicePixelRatio);
+	renderer.setSize(window.innerWidth, window.innerHeight);
+
+	container.appendChild(renderer.domElement);
+
+	document.body.appendChild(VRButton.createButton(renderer));
+	renderer.xr.enabled = true;
+
+	}
+												
+function animate() {
+
+	renderer.setAnimationLoop(animate);
+	renderer.render( scene, camera );
+
+		}
+
+		</script>
+	</body>
+</html>
