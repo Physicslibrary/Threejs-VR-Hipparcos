@@ -30,6 +30,10 @@ Solar system is the yellow sphere.
 
 Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, no common star names yet, no warp drive yet).
 
+Here is a scaled down (distance between stars) slice view of Hipparcos Catalog:
+
+[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos2.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos2.html)
+
 # Credits
 
 [https://threejs.org/](https://threejs.org/)
