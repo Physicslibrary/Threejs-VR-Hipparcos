@@ -124,12 +124,12 @@ function init() {
 
 	}
 
-	var starsMaterial = new THREE.PointsMaterial({color: 0x888888, size: 0.05});
+	var starsMaterial = new THREE.PointsMaterial({color: 0x888888, size: 0.002});
 	var starsHipparcos = new THREE.Points(starsGeometry, starsMaterial);
 	scene.add(starsHipparcos);
 
 	// our solar system a yellow round sphere
-	var sunGeometry = new THREE.SphereGeometry( 0.02, 32, 32 );
+	var sunGeometry = new THREE.SphereGeometry( 0.002, 32, 32 );
 	var sunMaterial = new THREE.MeshBasicMaterial( {color: 0xe7c100} );
 	var sun = new THREE.Mesh( sunGeometry,sunMaterial );
 	sun.position.set(0,yoffset,0);
