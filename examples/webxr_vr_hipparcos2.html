@@ -132,7 +132,7 @@ function init() {
 	var sunGeometry = new THREE.SphereGeometry( 0.002, 32, 32 );
 	var sunMaterial = new THREE.MeshBasicMaterial( {color: 0xe7c100} );
 	var sun = new THREE.Mesh( sunGeometry,sunMaterial );
-	sun.position.set(0,yoffset,0);
+	sun.position.set(0,yoffset,zoffset);
 	scene.add(sun);
 
 	renderer = new THREE.WebGLRenderer({antialias: false});
