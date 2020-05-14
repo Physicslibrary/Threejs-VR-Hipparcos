@@ -38,7 +38,7 @@ Here is a scaled down (distance between stars) slice view of Hipparcos Catalog:
 
 [https://threejs.org/](https://threejs.org/)
 
-hygxyz.csv (file is an old version, stars moving since 1989):<br>
+hygxyz.csv (1989 data):<br>
 [https://github.com/astronexus/HYG-Database](https://github.com/astronexus/HYG-Database)
 
 # References
