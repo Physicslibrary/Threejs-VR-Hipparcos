@@ -87,7 +87,7 @@ Three.js examples is the best place to learn and experiment:
 
 http://exploratoria.github.io/exhibits/astronomy/star-spotter/index.html
 
-No longer updated but here for learning:<br>
+No longer updated:<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html)
 
