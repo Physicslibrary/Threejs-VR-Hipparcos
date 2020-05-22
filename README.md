@@ -87,6 +87,12 @@ Three.js examples is the best place to learn and experiment:
 
 http://exploratoria.github.io/exhibits/astronomy/star-spotter/index.html
 
+No longer updated but here for learning:<br>
+
+[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html)
+
+[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos2.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos2.html)
+
 # Making Threejs-VR-Hipparcos (under construction)
 
 Camera frustum far plane default is 1000. Check how many stars appears when far plane is varied.<br>
