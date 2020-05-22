@@ -108,7 +108,7 @@ loader.load('hygxyz.csv',
 
 function init() {
 
-		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 100 );
 
 		scene = new THREE.Scene();
 		scene.background = new THREE.Color( 0x000000 );
@@ -175,7 +175,7 @@ function init() {
 	sun.position.set(0,0,0);
 	object.add(sun);
 
-	renderer = new THREE.WebGLRenderer();
+	renderer = new THREE.WebGLRenderer({antialias: true});
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 
