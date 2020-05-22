@@ -24,7 +24,7 @@ Oculus Browser (tested Quest Update >17.0 and three.js r115).
 
 No installation.<br>
 
-In Oculus Quest, open Oculus Browser and go to link (wait ~10sec for hygxyx.cvs to load before "Enter VR"):<br>
+In Oculus Quest, open Oculus Browser and go to link (let browser finished loading before "Enter VR"):<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/threejs_vr_hipparcos_color_index.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/threejs_vr_hipparcos_color_index.html)
 
@@ -39,6 +39,10 @@ Press one front trigger to move (two triggers to double speed).<br>
 Hold the left controller fixed and point the right controller in the direction to move.<br>
 
 Other buttons on controllers do not work, yet.<br>
+
+No longer updated:
+
+[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html)
 
 # References
 
