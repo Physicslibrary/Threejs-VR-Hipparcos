@@ -1,4 +1,4 @@
-# Threejs-VR-Hipparcos
+# Threejs-VR-Hipparcos (updating)
 
 Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.
 
