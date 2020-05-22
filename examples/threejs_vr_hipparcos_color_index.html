@@ -124,7 +124,7 @@ function init() {
 
 		for ( var i = 2; i < array.length-1; i ++ ) {
 
-// Stars' positions from 17th, 18th, and 19th column of hygxyz.cvs
+// Stars' positions from 17th, 18th, and 19th columns of hygxyz.cvs
 
 			var x = parseFloat(array[i].split(',')[17]);
 			var y = parseFloat(array[i].split(',')[18]);
@@ -167,9 +167,9 @@ function init() {
 
 	scene.add(object);
 
-	// Our solar system a yellow round sphere
+// Our solar system a yellow round sphere
 
-  var sunGeometry = new THREE.SphereGeometry( 0.1, 32, 32 );
+  	var sunGeometry = new THREE.SphereGeometry( 0.1, 32, 32 );
 	var sunMaterial = new THREE.MeshBasicMaterial( {color: 0xe7c100} );
 	var sun = new THREE.Mesh( sunGeometry,sunMaterial );
 	sun.position.set(0,0,0);
