@@ -144,11 +144,16 @@ function init() {
 												
 function animate() {
 
-	renderer.setAnimationLoop(animate);
-	renderer.render( scene, camera );
+	renderer.setAnimationLoop(render);
 
 		}
 
+function render() {
+
+		renderer.render( scene, camera );
+
+		}
+	
 		</script>
 	</body>
 </html>
