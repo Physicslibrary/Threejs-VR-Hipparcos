@@ -14,7 +14,7 @@ Oculus Quest recommended (required 6DOF headset/controllers).<br>
 
 # Software
 
-Oculus Browser (tested Quest Update >16.0 and three.js r115).
+Oculus Browser (tested Quest Update >17.0 and three.js r115).
 
 # Threejs-VR-Hipparcos Pages
 
