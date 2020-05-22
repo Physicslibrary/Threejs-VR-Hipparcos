@@ -40,10 +40,6 @@ Hold the left controller fixed and point the right controller in the direction t
 
 Other buttons on controllers do not work, yet.<br>
 
-No longer updated:
-
-[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html)
-
 # References
 
 [https://threejs.org/](https://threejs.org/)
