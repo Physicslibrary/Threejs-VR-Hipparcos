@@ -14,7 +14,7 @@ Oculus Quest recommended (required 6DOF headset/controllers).<br>
 
 # Software
 
-Oculus Browser (Oculus Quest Firmware update 12.0 or later).
+Oculus Browser (Oculus Quest Firmware update 17.0 or later).
 
 # Threejs-VR-Hipparcos Pages
 
@@ -22,26 +22,28 @@ Oculus Browser (Oculus Quest Firmware update 12.0 or later).
 
 # Installation
 
-No installation. In Oculus Quest, open Oculus Browser and go to link:
+No installation. In Oculus Quest, open Oculus Browser and go to link (wait ~10sec for hygxyx.cvs to load before "Enter VR"):
 
-[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html)
+[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/threejs_vr_hipparcos_color_index.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/threejs_vr_hipparcos_color_index.html)
 
-Solar system is the yellow sphere.
+Solar system is the yellow sphere.<br>
 
-Oculus Quest's headset 6DOF tracking works but no controllers (keep code simple, no common star names yet, no warp drive yet).
+Use Oculus Touch controllers to move around stars. It implements a simple way to move around 3D by making a "velocity vector" from left to right controllers.<br>
 
-Here is a scaled down (distance between stars) slice view of Hipparcos Catalog:
+The distance between controllers is the speed (controller next to the other is the lowest speed).<br>
 
-[https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos2.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos2.html)
+Press one front trigger to move (two triggers to double speed).<br>
 
-# Credits
+Hold the left controller fixed and point the right controller in the direction to move.<br>
+
+Other buttons on controllers do not work, yet.<br>
+
+# References
 
 [https://threejs.org/](https://threejs.org/)
 
 hygxyz.csv (1989 data):<br>
 [https://github.com/astronexus/HYG-Database](https://github.com/astronexus/HYG-Database)
-
-# References
 
 [https://www.cosmos.esa.int/web/hipparcos/home](https://www.cosmos.esa.int/web/hipparcos/home)
 
