@@ -1,0 +1,246 @@
+<!--
+
+threejs_vr_hipparcos_color_index.html
+
+https://github.com/Physicslibrary/Threejs-VR-Physics
+
+MIT License
+
+Copyright (c) 2020 Hartwell Fong
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+May 2020.
+
+Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.
+
+System requirements
+Oculus Quest recommended (6DoF headset/controllers).
+Oculus Browser (tested Quest Update >17.0 and three.js r115).
+
+References
+
+hygxyz.csv (1989 data):
+https://github.com/astronexus/HYG-Database
+
+https://threejs.org/
+
+https://en.wikipedia.org/wiki/Color_index
+
+Use controllers to fly come from:
+
+https://github.com/Physicslibrary/Threejs-WebXR-67
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Hipparcos Catalog</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>		
+	</head>
+	<body>
+
+
+<script type="module">
+    
+import * as THREE from '../build/three.module.js';
+import { VRButton } from './jsm/webxr/VRButton.js';
+
+var camera, scene, renderer;
+
+var points;
+var object;
+
+var controller1;
+var controller2;
+var controller_box;
+var controller_box2;
+var array = [];
+
+// Read hygxyz.csv
+
+var loader = new THREE.FileLoader();
+
+loader.load('hygxyz.csv',
+
+	// onLoad callback
+	function ( data ) {
+		
+		array = data.split('\n');
+
+		init();
+		animate();
+
+	},
+
+	// onProgress callback
+	function ( xhr ) {
+		console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+	},
+
+	// onError callback
+	function ( err ) {
+		console.error( 'An error happened' );
+	}
+
+);
+
+function init() {
+
+		camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 1000 );
+
+		scene = new THREE.Scene();
+		scene.background = new THREE.Color( 0x000000 );
+
+		var geometry = new THREE.BufferGeometry();
+
+		var positions = [];
+		var colors = [];
+
+		var color = new THREE.Color();
+
+		object = new THREE.Object3D();
+
+		for ( var i = 2; i < array.length-1; i ++ ) {
+
+// Stars' positions from 17th, 18th, and 19th column of hygxyz.cvs
+
+			var x = parseFloat(array[i].split(',')[17]);
+			var y = parseFloat(array[i].split(',')[18]);
+			var z = parseFloat(array[i].split(',')[19]);
+
+			positions.push( x, y, z );
+
+// Use Color Index from 16th column of hygxyz.cvs to paint stars
+
+			var colorIndex = parseFloat(array[i].split(',')[16]);
+
+			if (colorIndex <= -0.33){
+				color.set(0x7f00ff)}  // violet
+			if (colorIndex > -0.33 && colorIndex <= -0.30){
+				color.set(0x0000ff)}  // blue
+			if (colorIndex > -0.30 && colorIndex <= -0.02){
+				color.set(0xc0cfff)}
+			if (colorIndex > -0.02 && colorIndex <= 0.30){
+				color.set(0x00ff00)}
+			if (colorIndex > 0.30 && colorIndex <= 0.58){
+				color.set(0xefffdf)}
+			if (colorIndex > 0.58 && colorIndex <= 0.81){
+				color.set(0xffff00)} // yellow
+			if (colorIndex > 0.81){
+				color.set(0xff0000)} // red
+			if (colorIndex == ''){
+				color.set(0x000000)}
+
+			colors.push( color.r, color.g, color.b );
+
+		}
+
+	geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( positions, 3 ) );
+	geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
+
+	var material = new THREE.PointsMaterial( { size: 0.5, vertexColors: THREE.VertexColors } );
+
+	points = new THREE.Points( geometry, material );
+	object.add(points);
+
+	scene.add(object);
+
+	// Our solar system a yellow round sphere
+
+  var sunGeometry = new THREE.SphereGeometry( 0.1, 32, 32 );
+	var sunMaterial = new THREE.MeshBasicMaterial( {color: 0xe7c100} );
+	var sun = new THREE.Mesh( sunGeometry,sunMaterial );
+	sun.position.set(0,0,0);
+	object.add(sun);
+
+	renderer = new THREE.WebGLRenderer();
+	renderer.setPixelRatio( window.devicePixelRatio );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+
+	document.body.appendChild(renderer.domElement);
+	document.body.appendChild(VRButton.createButton(renderer));
+	renderer.xr.enabled = true;
+
+	controller1 = renderer.xr.getController(0); // right hand controller
+	controller1.addEventListener('selectstart', onSelectStart);
+	controller1.addEventListener('selectend', onSelectEnd);
+	scene.add(controller1);
+
+	controller2 = renderer.xr.getController(1); // left hand controller
+	controller2.addEventListener('selectstart', onSelectStart);
+	controller2.addEventListener('selectend', onSelectEnd);
+	scene.add(controller2);
+
+	var box = new THREE.BoxBufferGeometry(0.05,0.05,0.05);
+
+	controller_box = new THREE.Mesh(box, new THREE.MeshBasicMaterial({color: 0xffffff}));
+	controller_box.material.wireframe = true;
+
+	controller_box2 = new THREE.Mesh(box, new THREE.MeshBasicMaterial({color: 0xffffff}));
+	controller_box2.material.wireframe = true;
+
+	controller1.add(controller_box);
+	controller2.add(controller_box2);
+
+		}
+
+function handleController(controller) {
+			
+			if(controller.userData.isSelecting) {
+				
+			object.position.x += (controller2.position.x-controller1.position.x)*0.01;
+			object.position.y += (controller2.position.y-controller1.position.y)*0.01;
+			object.position.z += (controller2.position.z-controller1.position.z)*0.01;
+				
+			}
+		}
+	
+function onSelectStart() {
+			this.userData.isSelecting = true;
+			}
+		
+function onSelectEnd() {
+			this.userData.isSelecting = false;
+			}
+
+function animate() {
+
+			renderer.setAnimationLoop(render);
+			render();
+
+		}
+
+function render() {
+
+			handleController(controller1);
+			handleController(controller2);
+
+			renderer.render( scene, camera );
+
+		}
+
+            </script>
+      </body>
+</html>
