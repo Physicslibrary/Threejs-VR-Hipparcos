@@ -22,7 +22,9 @@ Oculus Browser (tested Quest Update >17.0 and three.js r115).
 
 # Installation
 
-No installation. In Oculus Quest, open Oculus Browser and go to link (wait ~10sec for hygxyx.cvs to load before "Enter VR"):
+No installation.<br>
+
+In Oculus Quest, open Oculus Browser and go to link (wait ~10sec for hygxyx.cvs to load before "Enter VR"):<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/threejs_vr_hipparcos_color_index.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/threejs_vr_hipparcos_color_index.html)
 
@@ -87,8 +89,10 @@ http://exploratoria.github.io/exhibits/astronomy/star-spotter/index.html
 
 # Making Threejs-VR-Hipparcos (under construction)
 
-Camera frustum far plane default is 2000. Check how many stars are within this boundary. 
+Camera frustum far plane default is 1000. Check how many stars appears when far plane is varied.<br>
 
 [https://threejs.org/docs/#api/en/cameras/PerspectiveCamera](https://threejs.org/docs/#api/en/cameras/PerspectiveCamera)
+
+Use 6th column ProperName in hygxyz.csv to display common star names.<br>
 
 <br><br>Copyright (c) 2020 Hartwell Fong
