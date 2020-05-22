@@ -87,7 +87,7 @@ Three.js examples is the best place to learn and experiment:
 
 http://exploratoria.github.io/exhibits/astronomy/star-spotter/index.html
 
-No longer updated:<br>
+The next two links are no longer updated. The first uses the headset 6DOF tracking and no controllers. The second is a scale down slice view of Hipparcos Catalog.<br>
 
 [https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html](https://physicslibrary.github.io/Threejs-VR-Hipparcos/examples/webxr_vr_hipparcos.html)
 
