@@ -1,12 +1,12 @@
-# Threejs-VR-Hipparcos (updating)
+# Threejs-VR-Hipparcos
 
-Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.
+Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.<br>
 
-<img src="images/com.oculus.vrshell-20200110-171622.jpg" width="640">
+<img src="images/hipparcos_color_index.jpg" width="640">
 
-<img src="images/IMG_5061.jpg" width="640">
+<img src="images/hipparcos_color_index_stereo.jpg" width="640">
 
-Stereoscopic view.
+Stereoscopic view.<br>
 
 # Hardware
 
