@@ -6,7 +6,7 @@ Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.<br>
 
 <img src="images/hipparcos_color_index_stereo.jpg" width="720">
 
-Stereoscopic view.<br>
+Stereoscopic view. The yellow sphere is the Solar system. Lower left is Alpha Centauri, closest star system ~4 light years.<br>
 
 # Hardware
 
