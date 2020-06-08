@@ -2,9 +2,9 @@
 
 Explore Hipparcos Catalogue of 119,617 stars with Threejs VR.<br>
 
-<img src="images/hipparcos_color_index.jpg" width="640">
+<img src="images/hipparcos_color_index.jpg" width="720">
 
-<img src="images/hipparcos_color_index_stereo.jpg" width="640">
+<img src="images/hipparcos_color_index_stereo.jpg" width="720">
 
 Stereoscopic view.<br>
 
